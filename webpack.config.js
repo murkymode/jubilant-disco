@@ -3,14 +3,14 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
-  entry: path.resolve(__dirname, 'client', 'index.jsx'),
+  entry: path.resolve(__dirname, 'client', 'src', 'index.jsx'),
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'client', 'dist'),
     filename: 'bundle.js',
   },
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.resolve(__dirname, 'client', 'dist'),
     },
     port: process.env.PORT,
     compress: true,
