@@ -1,8 +1,7 @@
+require('dotenv/config');
 const path = require('path');
 
 module.exports = {
-  // set mode to dev to set process.env.NODE_ENV on DefinePlugin to value development
-  mode: 'development',
   // entry point for this application will be in client dir w/in index.js
   entry: path.resolve(__dirname, 'client', 'index.jsx'),
   output: {
@@ -10,6 +9,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     // naming bundled file
     filename: 'bundle.js',
+  },
+  devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
+    port: process.env.PORT,
+    compress: true,
+    hot: true,
   },
   module: {
     rules: [
