@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b1929;
+  /*
+  Primary: 0b1929
+  Secondary: 011e3c
+  */
+}
+
+/* @font-face {
+  font-family: 'Avenir';
+  src: local('Avenir Next'),
+       url('../src/fonts/AvenirNext.ttc') format('woff'),
+} */
+
+#app {
+  color: white;
+  margin: 2vh;
+}
