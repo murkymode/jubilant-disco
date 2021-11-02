@@ -1,8 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
+import {
+  Box, Paper, Stack, Button,
+} from '@mui/material';
 
-export default function Splash() {
+export default function Home() {
   return (
     <Box
       sx={{
@@ -13,11 +15,13 @@ export default function Splash() {
           backgroundColor: '#131313',
           m: 1,
           width: '60vw',
-          height: 128,
+          height: '40vh',
         },
       }}
     >
-      <Paper elevation={4} />
+      <Button>
+        <Link to="/">Home </Link>
+      </Button>
     </Box>
   );
 }
