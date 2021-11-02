@@ -1,12 +1,24 @@
 import React from 'react';
+
+/* router */
+import {
+  BrowserRouter as Router,
+  Route, Switch,
+} from 'react-router-dom';
+
 import Splash from './Splash.jsx';
 
 export default function App() {
   return (
-    <div>
-      <h1>Project Planner</h1>
-      <Splash />
-      <p>SOME STUFFFF</p>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Splash />
+        </Route>
+        <Route path="/home">
+          {/* <Home /> */}
+        </Route>
+      </Switch>
+    </Router>
   );
 }
