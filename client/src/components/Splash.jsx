@@ -10,13 +10,14 @@ export default function Splash() {
         flexWrap: 'wrap',
         justifyContent: 'center',
         '& > :not(style)': {
+          backgroundColor: '#131313',
           m: 1,
           width: '60vw',
           height: 128,
         },
       }}
     >
-      <Paper elevation={24} />
+      <Paper elevation={4} />
     </Box>
   );
 }
