@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Box, Paper, Stack, Button,
+  Box,
 } from '@mui/material';
+
+import HomeButton from '../services/home-button';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
+        border: '2px solid blue',
         '& > :not(style)': {
           backgroundColor: '#131313',
           m: 1,
@@ -19,9 +21,7 @@ export default function Home() {
         },
       }}
     >
-      <Button>
-        <Link to="/">Home </Link>
-      </Button>
+      <HomeButton />
     </Box>
   );
 }

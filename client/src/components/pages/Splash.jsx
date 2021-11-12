@@ -4,7 +4,7 @@ import {
   Box, Paper, Stack, Button,
 } from '@mui/material';
 
-import theme from '../theme/index';
+import theme from '../theme';
 
 export default function Splash() {
   return (
@@ -25,12 +25,6 @@ export default function Splash() {
         <Stack>
           <Button>
             <Link to="/home">Project 1 </Link>
-          </Button>
-          <Button>
-            <Link to="/home">Project 2 </Link>
-          </Button>
-          <Button>
-            <Link to="/home">Project 3 </Link>
           </Button>
         </Stack>
       </Paper>
