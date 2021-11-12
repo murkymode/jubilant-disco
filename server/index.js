@@ -17,13 +17,18 @@ app.listen(port, () => {
 
 /* connect to mongoose */
 mongoose.connect(
-  /*
-      create a .env file in the root directory with path to DB
-      eg. DB_CONN=mongodb://127.0.0.1:27017/<DBname>
-   */
   process.env.DB_CONN,
   { useNewUrlParser: true },
 );
+
+app.get('/*', (req, res) => {
+  /* sends request to index.html for correct react router functionality */
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
 
 /* verify connection */
 db.on('error', console.error.bind(console, 'connection error:'));
