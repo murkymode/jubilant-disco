@@ -5,7 +5,7 @@ import {
 
 /* components */
 
-export default function ProjectHUD() {
+export default function ProjectView() {
   return (
     <Box
       style={{
@@ -17,7 +17,7 @@ export default function ProjectHUD() {
         border: '1px solid grey',
       }}
     >
-      <Typography variant="h4">Project HUD</Typography>
+      <Typography variant="h4">Project View</Typography>
     </Box>
   );
 }

@@ -6,8 +6,8 @@ import {
 
 export default function Home() {
   return (
-    <Button style={{ height: '2rem', width: '4em' }}>
-      <Link to="/">Home </Link>
+    <Button>
+      <Link to="/">Projects </Link>
     </Button>
   );
 }

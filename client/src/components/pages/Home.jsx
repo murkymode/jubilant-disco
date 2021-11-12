@@ -3,27 +3,37 @@ import {
   Box,
 } from '@mui/material';
 
-import HomeButton from '../services/home-button';
 import TitleBar from '../services/title-bar';
+import Search from '../services/search';
+import ProjectHUD from '../services/project-hud';
+import ProjectView from '../services/project-view';
 
 export default function Home() {
   return (
     <Box
-      sx={{
+      style={{
         display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'center',
-        border: '2px solid blue',
         width: '100%',
-        '& > :not(style)': {
-          backgroundColor: '#131313',
-          m: 1,
-        },
+        bottomMargin: '1rem',
       }}
     >
       <TitleBar />
-      <HomeButton />
+      <Box
+        style={{
+          display: 'flex',
+        }}
+      >
+        <Box>
+          <Search />
+          <ProjectHUD />
+        </Box>
+        <Box>
+          <ProjectView />
+        </Box>
+      </Box>
     </Box>
   );
 }
