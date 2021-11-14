@@ -12,8 +12,8 @@ export default function ProjectView() {
         display: 'flex',
         backgroundColor: '#131313',
         paddingLeft: '1em',
-        width: '30vw',
-        height: '3.5em',
+        width: '70vw',
+        height: '100%',
         border: '1px solid grey',
       }}
     >

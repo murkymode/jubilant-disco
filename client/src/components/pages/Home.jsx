@@ -24,6 +24,7 @@ export default function Home() {
       <Box
         style={{
           display: 'flex',
+          height: '85vh',
         }}
       >
         <Box>
