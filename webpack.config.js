@@ -16,6 +16,8 @@ module.exports = {
       directory: path.resolve(__dirname, 'client', 'dist'),
     },
     port: process.env.PORT,
+    /* historyApiFallback allows dev server to maintain routes */
+    historyApiFallback: true,
     compress: true,
     hot: true,
   },
