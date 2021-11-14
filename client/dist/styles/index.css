@@ -8,6 +8,10 @@ html, body {
   */
 }
 
+a {
+  color: aliceblue;
+}
+
 /* @font-face {
   font-family: 'Avenir';
   src: local('Avenir Next'),

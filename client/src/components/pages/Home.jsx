@@ -1,27 +1,40 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
 import {
-  Box, Paper, Stack, Button,
+  Box,
 } from '@mui/material';
+
+import TitleBar from '../services/title-bar';
+import Search from '../services/search';
+import ProjectHUD from '../services/project-hud';
+import ProjectView from '../services/project-view';
 
 export default function Home() {
   return (
     <Box
-      sx={{
+      style={{
         display: 'flex',
         flexWrap: 'wrap',
+        flexDirection: 'column',
         justifyContent: 'center',
-        '& > :not(style)': {
-          backgroundColor: '#131313',
-          m: 1,
-          width: '60vw',
-          height: '40vh',
-        },
+        width: '100%',
+        bottomMargin: '1rem',
       }}
     >
-      <Button>
-        <Link to="/">Home </Link>
-      </Button>
+      <TitleBar />
+      <Box
+        style={{
+          display: 'flex',
+          height: '85vh',
+        }}
+      >
+        <Box>
+          <Search />
+          <ProjectHUD />
+        </Box>
+        <Box>
+          <ProjectView />
+        </Box>
+      </Box>
     </Box>
   );
 }
