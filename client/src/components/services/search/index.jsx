@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {
-  Box, Typography,
+  Box, TextField,
 } from '@mui/material';
 
 /* components */
@@ -17,7 +17,7 @@ export default function Search() {
         border: '1px solid grey',
       }}
     >
-      <Typography variant="h4">Search</Typography>
+      <TextField variant="outlined">Search</TextField>
     </Box>
   );
 }
