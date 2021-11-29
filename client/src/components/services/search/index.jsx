@@ -17,7 +17,14 @@ export default function Search() {
         border: '1px solid grey',
       }}
     >
-      <TextField variant="outlined">Search</TextField>
+      <TextField
+        variant="outlined"
+        style={{
+          width: '25em',
+        }}
+      >
+        Search
+      </TextField>
     </Box>
   );
 }
