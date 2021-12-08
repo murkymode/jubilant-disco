@@ -1,6 +1,8 @@
 require('dotenv/config');
 const path = require('path');
 
+const port = process.env.PORT;
+
 module.exports = {
   mode: 'development',
   entry: path.resolve(__dirname, 'client', 'src'),
@@ -15,7 +17,7 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'client', 'dist'),
     },
-    port: process.env.PORT,
+    port,
     /* historyApiFallback allows dev server to maintain routes */
     historyApiFallback: true,
     compress: true,
