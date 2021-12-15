@@ -13,7 +13,7 @@ export default function ProjectHUD() {
         backgroundColor: '#131313',
         paddingLeft: '1em',
         width: '30vw',
-        height: '79vh',
+        height: '100%',
         border: '1px solid grey',
       }}
     >
