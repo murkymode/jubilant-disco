@@ -13,7 +13,6 @@ export default function Home() {
 
   const handleClick = (e) => {
     setDisplay(`${e.target.innerText}`);
-    console.log(`Hey it's: ${display}!`);
   };
 
   return (
