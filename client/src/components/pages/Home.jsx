@@ -22,16 +22,21 @@ export default function Home() {
     >
       <TitleBar />
       <Box
+        className="workarea"
         style={{
           display: 'flex',
           height: '85vh',
         }}
       >
-        <Box>
+        <Box
+          className="project-HUD"
+        >
           <Search />
           <ProjectHUD />
         </Box>
-        <Box>
+        <Box
+          className="project-view"
+        >
           <ProjectView />
         </Box>
       </Box>
