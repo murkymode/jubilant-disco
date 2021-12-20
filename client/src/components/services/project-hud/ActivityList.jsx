@@ -40,7 +40,6 @@ export default function ActivityList({ handleClick }) {
             <ListItemText primary="Whiteboard" />
           </ListItemButton>
         </ListItem>
-
       </List>
     </Box>
   );
