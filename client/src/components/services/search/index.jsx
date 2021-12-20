@@ -19,6 +19,7 @@ export default function Search() {
     >
       <TextField
         variant="outlined"
+        placeholder="SEARCH"
         style={{
           width: '25em',
           color: 'white',
