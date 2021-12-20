@@ -11,9 +11,9 @@ export default function ProjectHUD() {
       style={{
         display: 'flex',
         backgroundColor: '#131313',
-        paddingLeft: '1em',
+        padding: '1em',
         width: '30vw',
-        height: '100%',
+        height: '95%',
         border: '1px solid grey',
       }}
     >
