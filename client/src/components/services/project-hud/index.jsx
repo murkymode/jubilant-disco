@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box, Typography,
 } from '@mui/material';
@@ -6,18 +6,10 @@ import {
 /* components */
 import ActivityList from './ActivityList';
 
-export default function ProjectHUD() {
-  const [display, setDisplay] = useState('');
-
-  const handleClick = (e) => {
-    setDisplay(`${e.target.innerText}`);
-    console.log(`Hey it's: ${display}!`);
-  };
-
+export default function ProjectHUD({ handleClick }) {
   return (
     <Box
       style={{
-        display: 'flex',
         backgroundColor: '#131313',
         flexDirection: 'column',
         padding: '1em',

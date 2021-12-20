@@ -10,8 +10,8 @@ export default function Search() {
     <Box
       style={{
         display: 'flex',
+        justifyContent: 'center',
         backgroundColor: '#131313',
-        paddingLeft: '1em',
         width: '30vw',
         height: '3.5em',
         borderLeft: '1px solid grey',

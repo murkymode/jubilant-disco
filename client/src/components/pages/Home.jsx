@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
 } from '@mui/material';
@@ -9,10 +9,16 @@ import ProjectHUD from '../services/project-hud';
 import ProjectView from '../services/project-view';
 
 export default function Home() {
+  const [display, setDisplay] = useState('');
+
+  const handleClick = (e) => {
+    setDisplay(`${e.target.innerText}`);
+    console.log(`Hey it's: ${display}!`);
+  };
+
   return (
     <Box
       style={{
-        display: 'flex',
         flexWrap: 'wrap',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -32,12 +38,12 @@ export default function Home() {
           className="project-HUD"
         >
           <Search />
-          <ProjectHUD />
+          <ProjectHUD handleClick={handleClick} />
         </Box>
         <Box
           className="project-view"
         >
-          <ProjectView />
+          <ProjectView display={display} />
         </Box>
       </Box>
     </Box>

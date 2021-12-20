@@ -4,12 +4,16 @@ import {
 } from '@mui/material';
 
 /* components */
+import Taskboard from './board-view';
+import Calendar from './calendar-view';
+import Resources from './resource-view';
+import Whiteboard from './whiteboard-view';
 
-export default function ProjectView() {
+export default function ProjectView({ display }) {
   return (
     <Box
       style={{
-        display: 'flex',
+        flexDirection: 'column',
         backgroundColor: '#131313',
         padding: '1em',
         width: '70vw',
@@ -20,6 +24,10 @@ export default function ProjectView() {
       }}
     >
       <Typography variant="h4">Project View</Typography>
+      {display === 'Calendar' ? <Calendar /> : null}
+      {display === 'Taskboard' ? <Taskboard /> : null}
+      {display === 'Resources' ? <Resources /> : null}
+      {display === 'Whiteboard' ? <Whiteboard /> : null}
     </Box>
   );
 }
