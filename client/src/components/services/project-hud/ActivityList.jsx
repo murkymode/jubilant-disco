@@ -40,6 +40,12 @@ export default function ActivityList({ handleClick }) {
             <ListItemText primary="Whiteboard" />
           </ListItemButton>
         </ListItem>
+
+        <ListItem onClick={handleClick} disablePadding>
+          <ListItemButton>
+            <ListItemText primary="Notes" />
+          </ListItemButton>
+        </ListItem>
       </List>
     </Box>
   );
