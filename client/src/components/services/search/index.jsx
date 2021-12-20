@@ -21,6 +21,7 @@ export default function Search() {
         variant="outlined"
         style={{
           width: '25em',
+          color: 'white',
         }}
       >
         Search
