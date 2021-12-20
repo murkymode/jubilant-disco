@@ -10,11 +10,13 @@ export default function Search() {
     <Box
       style={{
         display: 'flex',
+        justifyContent: 'center',
         backgroundColor: '#131313',
-        paddingLeft: '1em',
         width: '30vw',
         height: '3.5em',
-        border: '1px solid grey',
+        borderLeft: '1px solid grey',
+        borderTop: '1px solid grey',
+        borderRight: '1px solid grey',
       }}
     >
       <TextField
@@ -22,7 +24,6 @@ export default function Search() {
         placeholder="SEARCH"
         style={{
           width: '25em',
-          color: 'white',
         }}
       >
         Search
