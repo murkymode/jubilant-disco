@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  Box, Typography, List, ListItem,
-  Divider, ListItemButton, ListItemText,
+  Box, List, ListItem,
+  ListItemButton, ListItemText,
 } from '@mui/material';
 
 /* components */
