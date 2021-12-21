@@ -13,7 +13,6 @@ export default function Home() {
 
   const handleClick = (e) => {
     setDisplay(`${e.target.innerText}`);
-    console.log(`Hey it's: ${display}!`);
   };
 
   return (
@@ -37,7 +36,7 @@ export default function Home() {
         <Box
           className="project-HUD"
         >
-          <Search />
+          <Search style={{ padding: '1rem' }} />
           <ProjectHUD handleClick={handleClick} />
         </Box>
         <Box

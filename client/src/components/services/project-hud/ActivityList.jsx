@@ -1,7 +1,7 @@
 import React from 'react';
 import {
-  Box, Typography, List, ListItem,
-  Divider, ListItemButton, ListItemText,
+  Box, List, ListItem,
+  ListItemButton, ListItemText,
 } from '@mui/material';
 
 /* components */
@@ -38,6 +38,12 @@ export default function ActivityList({ handleClick }) {
         <ListItem onClick={handleClick} disablePadding>
           <ListItemButton>
             <ListItemText primary="Whiteboard" />
+          </ListItemButton>
+        </ListItem>
+
+        <ListItem onClick={handleClick} disablePadding>
+          <ListItemButton>
+            <ListItemText primary="Notes" />
           </ListItemButton>
         </ListItem>
       </List>

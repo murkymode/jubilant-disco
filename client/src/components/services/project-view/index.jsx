@@ -8,6 +8,7 @@ import Taskboard from './board-view';
 import Calendar from './calendar-view';
 import Resources from './resource-view';
 import Whiteboard from './whiteboard-view';
+import Notes from './notes-view';
 
 export default function ProjectView({ display }) {
   return (
@@ -28,6 +29,7 @@ export default function ProjectView({ display }) {
       {display === 'Taskboard' ? <Taskboard /> : null}
       {display === 'Resources' ? <Resources /> : null}
       {display === 'Whiteboard' ? <Whiteboard /> : null}
+      {display === 'Notes' ? <Notes /> : null}
     </Box>
   );
 }

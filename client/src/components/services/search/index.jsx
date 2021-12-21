@@ -13,7 +13,7 @@ export default function Search() {
         justifyContent: 'center',
         backgroundColor: '#131313',
         width: '30vw',
-        height: '3.5em',
+        height: '9vh',
         borderLeft: '1px solid grey',
         borderTop: '1px solid grey',
         borderRight: '1px solid grey',
@@ -24,6 +24,7 @@ export default function Search() {
         placeholder="SEARCH"
         style={{
           width: '25em',
+          justifyContent: 'center',
         }}
       >
         Search
