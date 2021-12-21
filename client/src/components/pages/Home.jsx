@@ -36,7 +36,7 @@ export default function Home() {
         <Box
           className="project-HUD"
         >
-          <Search />
+          <Search style={{ padding: '1rem' }} />
           <ProjectHUD handleClick={handleClick} />
         </Box>
         <Box
