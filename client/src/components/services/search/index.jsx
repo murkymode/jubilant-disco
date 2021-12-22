@@ -23,7 +23,7 @@ export default function Search() {
         variant="outlined"
         placeholder="SEARCH"
         style={{
-          width: '25em',
+          width: '100%',
           justifyContent: 'center',
         }}
       >
