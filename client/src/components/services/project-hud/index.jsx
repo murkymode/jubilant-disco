@@ -19,7 +19,6 @@ export default function ProjectHUD({ handleClick }) {
       }}
     >
       <Typography variant="h4">Project HUD</Typography>
-      {/* <ProjectStats /> */}
       <ActivityList handleClick={handleClick} />
     </Box>
   );
