@@ -5,7 +5,7 @@ import Column from './task_column';
 export default function Taskboard() {
   const [columns, setColumns] = useState([
     {
-      title: 'step 1',
+      title: 'column 1',
       tasks: [
         {
           title: 'thing 1',
@@ -13,7 +13,7 @@ export default function Taskboard() {
       ],
     },
     {
-      title: 'step 2',
+      title: 'column 2',
       tasks: [
         {
           title: 'thing 2',
@@ -21,7 +21,7 @@ export default function Taskboard() {
       ],
     },
     {
-      title: 'step 3',
+      title: 'column 3',
       tasks: [
         {
           title: 'thing 3',
@@ -30,7 +30,12 @@ export default function Taskboard() {
     },
   ]);
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'row',
+      }}
+    >
       {columns.map((column) => <Column column={column} />)}
     </div>
   );
