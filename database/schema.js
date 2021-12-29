@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const projectSchema = new Schema({
   title: String,
   info: String,
-  taskSection: [
+  taskSections: [
     {
       title: String,
       tasks: [
