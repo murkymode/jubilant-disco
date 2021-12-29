@@ -13,11 +13,13 @@ const projectSchema = new Schema({
           title: String,
           info: String,
           created: Date.now,
+          due: Date,
           complete: Boolean,
           subtasks: [
             {
               title: String,
               info: String,
+              due: Date,
               created: Date.now,
               complete: Boolean,
             },
