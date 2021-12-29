@@ -3,10 +3,10 @@ import {
   Box,
 } from '@mui/material';
 
-import TitleBar from '../services/title-bar';
+import TitleBar from '../services/title_bar';
 import Search from '../services/search';
-import ProjectHUD from '../services/project-hud';
-import ProjectView from '../services/project-view';
+import ProjectHUD from '../services/project_hud';
+import ProjectView from '../services/project_view';
 
 export default function Home() {
   const [display, setDisplay] = useState('');

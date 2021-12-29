@@ -4,11 +4,11 @@ import {
 } from '@mui/material';
 
 /* components */
-import Taskboard from './board-view';
-import Calendar from './calendar-view';
-import Resources from './resource-view';
-import Whiteboard from './whiteboard-view';
-import Notes from './notes-view';
+import Taskboard from './board_view';
+import Calendar from './calendar_view';
+import Resources from './resource_view';
+import Whiteboard from './whiteboard_view';
+import Notes from './notes_view';
 
 export default function ProjectView({ display }) {
   return (
