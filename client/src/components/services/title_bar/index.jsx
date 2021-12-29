@@ -3,7 +3,7 @@ import {
   Box, Typography,
 } from '@mui/material';
 
-import HomeButton from '../home-button';
+import HomeButton from '../home_button';
 
 export default function TitleBar() {
   return (
