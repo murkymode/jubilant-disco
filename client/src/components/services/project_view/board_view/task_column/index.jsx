@@ -10,9 +10,12 @@ export default function TaskColumn({ column }) {
   return (
     <Box
       style={{
-        width: '10rem',
-        height: '100%',
+        width: '13em',
+        height: '35em',
         margin: '1em',
+        padding: '.5em',
+        border: '1px solid grey',
+        borderRadius: '5px',
       }}
     >
       {`Hello from ${column.title}`}
