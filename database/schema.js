@@ -34,6 +34,7 @@ const projectSchema = new Schema({
       date: Date,
       event: {
         info: String,
+        begins: Date,
         endsOn: Date,
         allDay: Boolean,
       },
