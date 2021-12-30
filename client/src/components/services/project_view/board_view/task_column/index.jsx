@@ -16,7 +16,7 @@ export default function TaskColumn({ column }) {
         padding: '0.5em',
         border: '1px solid grey',
         borderRadius: '0.5em',
-        overflow: 'scroll',
+        overflow: 'auto',
       }}
     >
       {`Hello from ${column.title}`}

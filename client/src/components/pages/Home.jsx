@@ -1,7 +1,4 @@
 import React, { useState } from 'react';
-import {
-  Box,
-} from '@mui/material';
 
 import TitleBar from '../services/title_bar';
 import Search from '../services/search';
@@ -16,7 +13,7 @@ export default function Home() {
   };
 
   return (
-    <Box
+    <div
       style={{
         flexWrap: 'wrap',
         flexDirection: 'column',
@@ -26,25 +23,25 @@ export default function Home() {
       }}
     >
       <TitleBar />
-      <Box
+      <div
         className="workarea"
         style={{
           display: 'flex',
           height: '85vh',
         }}
       >
-        <Box
+        <div
           className="project-HUD"
         >
           <Search style={{ padding: '1rem' }} />
           <ProjectHUD handleClick={handleClick} />
-        </Box>
-        <Box
+        </div>
+        <div
           className="project-view"
         >
           <ProjectView display={display} />
-        </Box>
-      </Box>
-    </Box>
+        </div>
+      </div>
+    </div>
   );
 }
