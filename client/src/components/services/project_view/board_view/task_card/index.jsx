@@ -8,9 +8,9 @@ export default function TaskCard({ task }) {
         width: '100%',
         minHeight: '6rem',
         marginBottom: '1em',
-        padding: '.5em',
+        padding: '0.5em',
         border: '1px solid grey',
-        borderRadius: '5px',
+        borderRadius: '0.3em',
       }}
     >
       {`Hello from ${task.title}`}
