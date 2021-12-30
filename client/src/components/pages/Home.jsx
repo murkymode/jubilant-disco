@@ -9,7 +9,7 @@ import ProjectHUD from '../services/project_hud';
 import ProjectView from '../services/project_view';
 
 export default function Home() {
-  const [display, setDisplay] = useState('');
+  const [display, setDisplay] = useState('Taskboard');
 
   const handleClick = (e) => {
     setDisplay(`${e.target.innerText}`);
