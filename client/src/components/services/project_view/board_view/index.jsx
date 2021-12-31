@@ -40,7 +40,7 @@ export default function Taskboard() {
       style={{
         display: 'flex',
         flexDirection: 'row',
-        overflow: 'scroll',
+        overflow: 'auto',
       }}
     >
       {columns.map((column) => <Column key={column.id} column={column} />)}
