@@ -15,7 +15,7 @@ export default function ProjectHUD({ handleClick }) {
         flexDirection: 'column',
         padding: '1em',
         width: '30vw',
-        height: '92%',
+        height: '76vh',
         border: '1px solid grey',
       }}
     >
