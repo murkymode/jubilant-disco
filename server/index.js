@@ -5,6 +5,7 @@ const path = require('path');
 
 const db = mongoose.connection;
 const port = process.env.PORT || 3000;
+const { DB_CONN } = process.env;
 const app = express();
 
 /* middleware */
@@ -17,11 +18,11 @@ app.listen(port, () => {
 
 /* connect to mongoose */
 mongoose.connect(
-  process.env.DB_CONN,
+  DB_CONN,
   { useNewUrlParser: true },
 );
 
-app.get('/*', (req, res) => {
+app.get('/home', (req, res) => {
   /* sends request to index.html for correct react router functionality */
   res.sendFile(path.join(__dirname, '../client/dist/index.html'), (err) => {
     if (err) {
@@ -35,6 +36,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => { console.log('⛓  Successful connection to mongodb! ⛓'); });
 
 /* routes */
-// const allProjects = require('./routes/allProjects');
+const allProjects = require('./routes/allProjects');
 
-// app.use('/projects', allProjects);
+app.use('/api/projects', allProjects);
