@@ -21,20 +21,20 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-// router.post('/', async (req, res) => {
-//   // const { req.body } = req.body;
-//   const project = new Project({
-//     item: req.body.item,
-//     info: req.body.info,
-//   });
+router.post('/', async (req, res) => {
+  const { body } = req;
+  const project = new Project({
+    title: body.title,
+    info: body.info,
+  });
 
-//   try {
-//     const write = await project.save();
-//     res.send(write);
-//   } catch (err) {
-//     res.send(`Error: ${err}`);
-//   }
-// });
+  try {
+    const write = await project.save();
+    res.send(write);
+  } catch (err) {
+    res.send(`Error: ${err}`);
+  }
+});
 
 // router.post('/:id', async (req, res) => {
 //   try {

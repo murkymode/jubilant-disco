@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
-  Box, TextField,
+  TextField,
 } from '@mui/material';
 
 /* components */
 
 export default function Search() {
   return (
-    <Box
+    <div
       style={{
         display: 'flex',
         justifyContent: 'center',
@@ -20,15 +20,20 @@ export default function Search() {
       }}
     >
       <TextField
-        variant="outlined"
-        placeholder="SEARCH"
+        variant="filled"
+        label="Search"
+        color="success"
         style={{
           width: '100%',
+          margin: '.5em',
           justifyContent: 'center',
         }}
-      >
-        Search
-      </TextField>
-    </Box>
+        inputProps={{
+          style: {
+            color: 'white',
+          },
+        }}
+      />
+    </div>
   );
 }
