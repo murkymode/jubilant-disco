@@ -2,41 +2,25 @@
   "name": "jubilant-disco",
   "version": "1.0.0",
   "description": "Project Planner",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --watch",
-    "dev": "npx webpack-dev-server",
-    "start": "npx nodemon server/index.js",
-    "build": "webpack --mode development",
-    "react-dev": "webpack --mode development -w",
-    "react-prod": "webpack --mode production -w"
+  "keywords": [],
+  "homepage": "https://github.com/murkymode/jubilant-disco#readme",
+  "bugs": {
+    "url": "https://github.com/murkymode/jubilant-disco/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/murkymode/jubilant-disco.git"
   },
-  "keywords": [],
-  "author": "Jason Marble",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/murkymode/jubilant-disco/issues"
-  },
-  "homepage": "https://github.com/murkymode/jubilant-disco#readme",
-  "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.0",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.60.0",
-    "webpack-cli": "^4.9.1"
+  "author": "Jason Marble",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "dev": "npx webpack-dev-server",
+    "react-dev": "webpack --mode development -w",
+    "react-prod": "webpack --mode production -w",
+    "start": "npx nodemon server/index.js",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@emotion/react": "^11.5.0",
@@ -52,7 +36,23 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-query": "^3.34.7",
-    "react-router-dom": "^5.3.0",
-    "webpack-dev-server": "^4.4.0"
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
   }
 }
