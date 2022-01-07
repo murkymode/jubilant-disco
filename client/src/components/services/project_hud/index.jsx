@@ -6,6 +6,7 @@ import {
 
 /* components */
 import ActivityList from './ActivityList';
+import ActionsPanel from './ActionsPanel';
 
 export default function ProjectHUD({ handleClick }) {
   return (
@@ -20,6 +21,7 @@ export default function ProjectHUD({ handleClick }) {
       }}
     >
       <Typography variant="h4">Project HUD</Typography>
+      <ActionsPanel />
       <ActivityList handleClick={handleClick} />
     </Box>
   );
