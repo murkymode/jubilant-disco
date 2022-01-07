@@ -21,6 +21,10 @@ a {
 
 #app {
   background-color: #1c3148;
-  color: rgb(119, 238, 251);
+  color: #77eefb;
   font-weight: bold;
+}
+
+#search-input {
+  color: white;
 }

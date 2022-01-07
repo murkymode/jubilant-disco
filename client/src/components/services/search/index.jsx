@@ -20,6 +20,7 @@ export default function Search() {
       }}
     >
       <TextField
+        id="search-input"
         variant="filled"
         label="Search"
         color="success"
@@ -28,10 +29,8 @@ export default function Search() {
           margin: '.5em',
           justifyContent: 'center',
         }}
-        inputProps={{
-          style: {
-            color: 'white',
-          },
+        InputLabelProps={{
+          style: { color: 'white' },
         }}
       />
     </div>
