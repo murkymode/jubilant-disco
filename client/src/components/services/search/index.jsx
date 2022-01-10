@@ -24,7 +24,7 @@ export default function Search() {
         variant="filled"
         label="Search"
         color="success"
-        style={{
+        sx={{
           width: '100%',
           margin: '.5em',
           justifyContent: 'center',
