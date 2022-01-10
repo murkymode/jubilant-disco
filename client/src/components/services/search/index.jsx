@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {
-  TextField,
+  TextField, Box,
 } from '@mui/material';
 
 /* components */
 
 export default function Search() {
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: '#131313',
@@ -33,6 +33,6 @@ export default function Search() {
           style: { color: 'white' },
         }}
       />
-    </div>
+    </Box>
   );
 }
