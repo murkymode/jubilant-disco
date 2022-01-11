@@ -5,6 +5,7 @@ import {
 
 /* components */
 import theme from '../../theme';
+import AddTask from './AddTask';
 
 const { main } = theme.palette.secondary;
 
@@ -14,13 +15,10 @@ export default function ActionsPanel() {
       sx={{
         minWidth: '100%',
         minHeight: '20vh',
-        '&:hover': {
-          // backgroundColor: 'primary.main',
-          opacity: [0.9, 0.8, 0.7],
-        },
       }}
     >
       Hello from actions
+      <AddTask />
     </Box>
   );
 }
