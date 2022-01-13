@@ -8,7 +8,7 @@ import HomeButton from '../home_button';
 export default function TitleBar() {
   return (
     <Box
-      style={{
+      sx={{
         display: 'flex',
         backgroundColor: '#131313',
         justifyContent: 'space-between',
