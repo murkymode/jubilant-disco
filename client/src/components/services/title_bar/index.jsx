@@ -17,7 +17,7 @@ export default function TitleBar() {
       }}
     >
       <HomeButton />
-      <Typography variant="h2">Task Attack</Typography>
+      <Typography sx={{ fontWeight: 'bolder' }} variant="h2">Task Attack</Typography>
     </Box>
   );
 }
