@@ -8,7 +8,7 @@ import ProjectView from '../services/project_view';
 export default function Home() {
   const [display, setDisplay] = useState('Taskboard');
 
-  const handleClick = (e) => {
+  const handleDisplay = (e) => {
     setDisplay(`${e.target.innerText}`);
   };
 
@@ -34,7 +34,7 @@ export default function Home() {
           className="project-HUD"
         >
           <Search style={{ padding: '1rem' }} />
-          <ProjectHUD handleClick={handleClick} />
+          <ProjectHUD handleDisplay={handleDisplay} />
         </div>
         <div
           className="project-view"

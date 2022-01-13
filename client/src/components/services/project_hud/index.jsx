@@ -8,7 +8,7 @@ import {
 import ActivityList from './ActivityList';
 import ActionsPanel from './ActionsPanel';
 
-export default function ProjectHUD({ handleClick }) {
+export default function ProjectHUD({ handleDisplay }) {
   return (
     <Box
       style={{
@@ -22,7 +22,7 @@ export default function ProjectHUD({ handleClick }) {
     >
       <Typography variant="h4">Project HUD</Typography>
       <ActionsPanel />
-      <ActivityList handleClick={handleClick} />
+      <ActivityList handleDisplay={handleDisplay} />
     </Box>
   );
 }
