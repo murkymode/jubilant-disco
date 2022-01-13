@@ -12,14 +12,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const project = await Project.findById(req.params.id);
-//     res.json(project);
-//   } catch (err) {
-//     res.send(`Error: ${err}`);
-//   }
-// });
+router.get('/current', async (req, res) => {
+  try {
+    const project = await Project.findById(req.body.id);
+    res.json(project);
+  } catch (err) {
+    res.send(`Error: ${err}`);
+  }
+});
 
 router.post('/', async (req, res) => {
   const { body } = req;
