@@ -36,9 +36,9 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.post('/:id', async (req, res) => {
+// router.post('/addTask', async (req, res) => {
 //   try {
-//     const project = await Project.findById(req.params.id);
+//     const project = await Project.findById(req.body.id);
 //     /* find out what's been changed and assign here. ie. project[target] */
 //     const update = await project.save();
 //     res.json(update);
