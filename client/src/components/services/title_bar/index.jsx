@@ -3,7 +3,7 @@ import {
   Box, Typography,
 } from '@mui/material';
 
-import HomeButton from '../home_button';
+import HomeButton from './HomeButton';
 
 export default function TitleBar() {
   return (
@@ -17,7 +17,7 @@ export default function TitleBar() {
       }}
     >
       <HomeButton />
-      <Typography sx={{ fontWeight: 'bolder' }} variant="h2">Task Attack</Typography>
+      <Typography sx={{ fontWeight: 'bolder' }} variant="h2">Task Approach</Typography>
     </Box>
   );
 }

@@ -7,7 +7,9 @@ import {
 export default function Home() {
   return (
     <Button>
-      <Link to="/">Projects </Link>
+      <Link to="/">
+        Projects
+      </Link>
     </Button>
   );
 }
