@@ -5,7 +5,7 @@ import Search from '../services/search';
 import ProjectHUD from '../services/project_hud';
 import ProjectView from '../services/project_view';
 
-export default function Home() {
+export default function Home({ projects }) {
   const [display, setDisplay] = useState('Taskboard');
 
   const handleDisplay = (e) => {
