@@ -8,6 +8,7 @@ import {
 
 import theme from '../theme';
 import Context from '../context';
+import AddProject from '../services/add_project';
 
 const { main } = theme.palette.secondary;
 
@@ -36,12 +37,17 @@ export default function Splash({ projects }) {
       <Paper elevation={4}>
         <Stack>
           {projects.map((project) => (
-            <Button onClick={setID} id={project._id} key={project._id}>
+            <Button
+              onClick={setID}
+              id={project._id}
+              key={project._id}
+            >
               <Link to="/home">{project.title}</Link>
             </Button>
           ))}
         </Stack>
       </Paper>
+      <AddProject />
     </Box>
   );
 }
