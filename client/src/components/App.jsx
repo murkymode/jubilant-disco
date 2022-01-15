@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 
 /* router */
@@ -11,6 +11,9 @@ import {
 import {
   QueryClient, QueryClientProvider, useQuery,
 } from 'react-query';
+
+/* context for project ID */
+import Context from './context';
 
 /* pages */
 import Splash from './pages/Splash';
@@ -25,6 +28,13 @@ export default function Page() {
     </QueryClientProvider>
   );
   function App() {
+    const [projectID, setProjectID] = useState('');
+
+    const handleID = (stringID) => {
+      setProjectID(stringID);
+    };
+
+    /* fetching projects */
     const {
       isLoading, error, data,
     } = useQuery('fetchProjects', () => fetch('/api/projects')
@@ -32,20 +42,29 @@ export default function Page() {
 
     if (isLoading) return 'Loading Projects...';
     if (error) return `Aww, an error: ${error.message}`;
+
     return (
-      <>
-        <CssBaseline />
-        <Router>
-          <Switch>
-            <Route exact path="/">
-              <Splash projects={data} />
-            </Route>
-            <Route path="/home">
-              <Home projects={data} />
-            </Route>
-          </Switch>
-        </Router>
-      </>
+      <Context.Provider
+        value={{
+          handleID,
+          projectID,
+          setProjectID,
+        }}
+      >
+        <>
+          <CssBaseline />
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Splash projects={data} />
+              </Route>
+              <Route path="/home">
+                <Home projects={data} />
+              </Route>
+            </Switch>
+          </Router>
+        </>
+      </Context.Provider>
     );
   }
 }
