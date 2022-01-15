@@ -12,7 +12,6 @@ import {
   QueryClient, QueryClientProvider, useQuery,
 } from 'react-query';
 
-/* context for project ID */
 import Context from './context';
 
 /* pages */

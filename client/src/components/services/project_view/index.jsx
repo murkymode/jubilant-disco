@@ -16,7 +16,7 @@ export default function ProjectView({ display }) {
       style={{
         flexDirection: 'column',
         backgroundColor: '#131313',
-        padding: '1em',
+        // paddingTop: '1em',
         width: '70vw',
         height: '100%',
         borderBottom: '1px solid grey',
@@ -24,7 +24,7 @@ export default function ProjectView({ display }) {
         borderRight: '1px solid grey',
       }}
     >
-      <Typography variant="h4">Project View</Typography>
+      <Typography variant="h4" style={{ margin: '.5em' }}>Project View</Typography>
       {display === 'Calendar' ? <Calendar /> : null}
       {display === 'Taskboard' ? <Taskboard /> : null}
       {display === 'Resources' ? <Resources /> : null}
