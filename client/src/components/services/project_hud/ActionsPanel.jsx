@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
+
 import {
   Box,
 } from '@mui/material';
 
 /* components */
-import theme from '../../theme';
+import Context from '../../context';
+// import theme from '../../theme';
 import AddTask from './AddTask';
 
-const { main } = theme.palette.secondary;
+// const { main } = theme.palette.secondary;
 
 export default function ActionsPanel() {
+  const { projectID } = useContext(Context);
+  // const [tasks, setTasks] = useState([]);
+
+  const addTask = () => {
+    console.log(projectID);
+  };
+
   return (
     <Box
       sx={{
@@ -18,7 +27,7 @@ export default function ActionsPanel() {
       }}
     >
       Hello from actions
-      <AddTask />
+      <AddTask addTask={addTask} />
     </Box>
   );
 }
