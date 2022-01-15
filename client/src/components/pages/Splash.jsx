@@ -28,6 +28,7 @@ export default function Splash({ projects }) {
         justifyContent: 'center',
         '& > :not(style)': {
           backgroundColor: main,
+          p: '0.5em',
           m: 1,
           width: '60vw',
           height: '40vh',
@@ -35,9 +36,16 @@ export default function Splash({ projects }) {
       }}
     >
       <Paper elevation={4}>
-        <Stack>
+        <Stack
+          sx={{
+            '& > :not(style)': {
+              m: 1,
+            },
+          }}
+        >
           {projects.map((project) => (
             <Button
+              variant="outlined"
               onClick={setID}
               id={project._id}
               key={project._id}
