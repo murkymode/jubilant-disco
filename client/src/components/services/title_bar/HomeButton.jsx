@@ -6,7 +6,9 @@ import {
 
 export default function Home() {
   return (
-    <Button>
+    <Button
+      variant="outlined"
+    >
       <Link to="/">
         Projects
       </Link>

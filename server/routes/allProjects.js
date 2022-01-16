@@ -3,6 +3,7 @@ const Project = require('../../database/models/project');
 
 const router = express.Router();
 
+/* get projects */
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
@@ -12,6 +13,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+/* get current project */
 router.get('/current', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
@@ -21,6 +23,7 @@ router.get('/current', async (req, res) => {
   }
 });
 
+/* new project */
 router.post('/', async (req, res) => {
   const { body } = req;
   const project = new Project({
@@ -36,20 +39,21 @@ router.post('/', async (req, res) => {
   }
 });
 
-// router.post('/addTask', async (req, res) => {
+/* new column */
+router.post('/addColumn', async (req, res) => {
+  try {
+    const project = await Project.findById(req.body.id);
+    project.columns.push(req.body);
+    const update = await project.save();
+    res.json(update);
+  } catch (err) {
+    res.send(`Error: ${err}`);
+  }
+});
+
+// router.delete('/remove', async (req, res) => {
 //   try {
 //     const project = await Project.findById(req.body.id);
-//     /* find out what's been changed and assign here. ie. project[target] */
-//     const update = await project.save();
-//     res.json(update);
-//   } catch (err) {
-//     res.send(`Error: ${err}`);
-//   }
-// });
-
-// router.delete('/:id', async (req, res) => {
-//   try {
-//     const project = await Project.findById(req.params.id);
 //     const removed = await project.remove();
 //     res.json(removed);
 //   } catch (err) {
