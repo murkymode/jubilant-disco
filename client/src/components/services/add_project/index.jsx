@@ -6,7 +6,6 @@ import {
 
 export default function AddProject() {
   const handleSubmit = (e) => {
-    e.preventDefault();
     const title = e.target[0].value;
     const info = e.target[2].value;
 
@@ -17,10 +16,10 @@ export default function AddProject() {
 
     axios.post('/api/projects', request)
       .then((response) => {
-        console.log(response);
+        response.send();
       })
       .catch((error) => {
-        console.log(error);
+        error.send();
       });
   };
 
