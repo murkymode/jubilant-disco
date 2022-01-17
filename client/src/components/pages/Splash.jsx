@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import {
@@ -12,7 +13,7 @@ import ManageProjects from '../services/manage_projects';
 
 const { main } = theme.palette.secondary;
 
-export default function Splash({ projects }) {
+const Splash = ({ projects }) => {
   /* sets current project id in context */
   const { handleID } = useContext(Context);
   const setID = (e) => {
@@ -59,6 +60,7 @@ export default function Splash({ projects }) {
                 maxWidth: '40em',
                 maxHeight: '3em',
                 overflow: 'hidden',
+                cursor: 'pointer',
               }}
             >
               <Link to="/home">{project.title}</Link>
@@ -69,4 +71,17 @@ export default function Splash({ projects }) {
       <ManageProjects />
     </Box>
   );
-}
+};
+
+Splash.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    info: PropTypes.string,
+  })),
+};
+
+Splash.defaultProps = {
+  projects: [],
+};
+
+export default Splash;
