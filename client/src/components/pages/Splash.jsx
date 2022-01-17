@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { arrayOf } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import {
@@ -77,6 +77,14 @@ Splash.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     info: PropTypes.string,
+    columns: arrayOf(PropTypes.shape({
+    })),
+    calendarEvents: arrayOf(PropTypes.shape({
+    })),
+    resources: arrayOf(PropTypes.shape({
+    })),
+    notes: arrayOf(PropTypes.shape({
+    })),
   })),
 };
 
