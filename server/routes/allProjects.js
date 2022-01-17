@@ -4,7 +4,7 @@ const Project = require('../../database/models/project');
 const router = express.Router();
 
 /* get projects */
-router.get('/*', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
     res.json(projects);
@@ -51,6 +51,7 @@ router.post('/addColumn', async (req, res) => {
   }
 });
 
+/* remove project */
 router.delete('/', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
