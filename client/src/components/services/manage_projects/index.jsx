@@ -8,7 +8,6 @@ export default function AddProject() {
   const handleSubmit = (e) => {
     const title = e.target[0].value;
     const info = e.target[2].value;
-
     const request = {
       title,
       info,
@@ -44,6 +43,7 @@ export default function AddProject() {
           }}
         >
           <TextField
+            required
             id="search-input"
             variant="outlined"
             label="Project Title"

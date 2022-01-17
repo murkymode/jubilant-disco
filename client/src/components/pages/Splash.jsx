@@ -8,7 +8,7 @@ import {
 
 import theme from '../theme';
 import Context from '../context';
-import AddProject from '../services/add_project';
+import ManageProjects from '../services/manage_projects';
 
 const { main } = theme.palette.secondary;
 
@@ -66,7 +66,7 @@ export default function Splash({ projects }) {
           ))}
         </Stack>
       </Paper>
-      <AddProject />
+      <ManageProjects />
     </Box>
   );
 }
