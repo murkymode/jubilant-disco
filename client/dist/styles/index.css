@@ -23,7 +23,7 @@ a {
   background-color: #1c3148;
   color: #77eefb;
   font-weight: bold;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #search-input {
