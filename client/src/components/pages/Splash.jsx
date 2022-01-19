@@ -67,8 +67,8 @@ const Splash = ({ projects }) => {
             </Button>
           ))}
         </Stack>
+        <ManageProjects />
       </Paper>
-      <ManageProjects />
     </Box>
   );
 };
