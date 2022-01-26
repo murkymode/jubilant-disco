@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 
 /* router */
 import {
@@ -50,19 +49,16 @@ export default function Page() {
           setProjectID,
         }}
       >
-        <>
-          <CssBaseline />
-          <Router>
-            <Switch>
-              <Route exact path="/">
-                <Splash projects={data} />
-              </Route>
-              <Route path="/home">
-                <Home projects={data} />
-              </Route>
-            </Switch>
-          </Router>
-        </>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Splash projects={data} />
+            </Route>
+            <Route path="/home">
+              <Home projects={data} />
+            </Route>
+          </Switch>
+        </Router>
       </Context.Provider>
     );
   }
