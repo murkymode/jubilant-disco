@@ -1,7 +1,4 @@
-import * as React from 'react';
-// import {
-//   Box, Typography,
-// } from '@mui/material';
+import React from 'react';
 
 /* components */
 import Taskboard from './board_view';
@@ -16,7 +13,6 @@ export default function ProjectView({ display }) {
       style={{
         flexDirection: 'column',
         backgroundColor: '#131313',
-        // paddingTop: '1em',
         width: '70vw',
         height: '100%',
         borderBottom: '1px solid grey',

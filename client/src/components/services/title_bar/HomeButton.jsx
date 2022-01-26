@@ -1,17 +1,17 @@
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Button,
-} from '@mui/material';
 
 export default function Home() {
   return (
-    <Button
-      variant="outlined"
+    <button
+      type="button"
+      style={{
+        backgroundColor: '#131313',
+      }}
     >
       <Link to="/">
         Projects
       </Link>
-    </Button>
+    </button>
   );
 }
