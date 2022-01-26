@@ -26,9 +26,6 @@ export default function AddProject() {
           backgroundColor: '#131313',
           display: 'flex',
           justifyContent: 'space-evenly',
-          '& > :not(style)': {
-            m: 1,
-          },
         }}
       >
         <form
