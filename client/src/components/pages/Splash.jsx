@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext } from 'react';
+import axios from 'axios';
 import PropTypes, { arrayOf } from 'prop-types';
 import { Link } from 'react-router-dom';
 
@@ -17,6 +18,12 @@ const Splash = ({ projects }) => {
     handleID(id);
   };
 
+  const handleDelete = (e) => {
+    const projectID = e.target.parentNode.id;
+
+    axios.delete('/api/projects', { data: { id: projectID } });
+  };
+
   return (
     <div
       style={{
@@ -27,7 +34,6 @@ const Splash = ({ projects }) => {
     >
       <div
         style={{
-          display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
         }}
@@ -38,26 +44,38 @@ const Splash = ({ projects }) => {
           }}
         >
           {projects.map((project) => (
-            <button
-              type="button"
-              onClick={setID}
-              id={project._id}
+            <div
               key={project._id}
-              style={{
-                margin: '1em',
-                minWidth: '20em',
-                maxWidth: '40em',
-                maxHeight: '3em',
-                minHeight: '2em',
-                overflow: 'hidden',
-                cursor: 'pointer',
-                backgroundColor: main,
-                border: 'none',
-                borderRadius: '3px',
-              }}
             >
-              <Link to="/home">{project.title}</Link>
-            </button>
+              <button
+                type="button"
+                onClick={setID}
+                id={project._id}
+                style={{
+                  display: 'flex',
+                  margin: '1em',
+                  minWidth: '20em',
+                  maxWidth: '40em',
+                  maxHeight: '3em',
+                  minHeight: '2em',
+                  overflow: 'hidden',
+                  cursor: 'pointer',
+                  color: 'white',
+                  backgroundColor: main,
+                  border: 'none',
+                  borderRadius: '3px',
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
+                <Link to="/home">{project.title}</Link>
+                <div
+                  onClick={handleDelete}
+                >
+                  X
+                </div>
+              </button>
+            </div>
           ))}
         </div>
         <ManageProjects />
