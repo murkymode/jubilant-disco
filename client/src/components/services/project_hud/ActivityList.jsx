@@ -1,14 +1,10 @@
 import React from 'react';
-import {
-  Box, List, ListItem,
-  ListItemButton, ListItemText,
-} from '@mui/material';
 
 /* components */
 
 export default function ActivityList({ handleDisplay }) {
   return (
-    <Box
+    <div
       style={{
         display: 'flex',
         backgroundColor: '#131313',
@@ -16,37 +12,37 @@ export default function ActivityList({ handleDisplay }) {
         paddingTop: '1em',
       }}
     >
-      <List>
-        <ListItem onClick={handleDisplay} disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Taskboard" />
-          </ListItemButton>
-        </ListItem>
+      <ul>
+        <li>
+          <button type="button" onClick={handleDisplay}>
+            Taskboard
+          </button>
+        </li>
 
-        <ListItem onClick={handleDisplay} disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Calendar" />
-          </ListItemButton>
-        </ListItem>
+        <li>
+          <button type="button" onClick={handleDisplay}>
+            Calendar
+          </button>
+        </li>
 
-        <ListItem onClick={handleDisplay} disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Resources" />
-          </ListItemButton>
-        </ListItem>
+        <li>
+          <button type="button" onClick={handleDisplay}>
+            Resources
+          </button>
+        </li>
 
-        <ListItem onClick={handleDisplay} disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Whiteboard" />
-          </ListItemButton>
-        </ListItem>
+        <li>
+          <button type="button" onClick={handleDisplay}>
+            Whiteboard
+          </button>
+        </li>
 
-        <ListItem onClick={handleDisplay} disablePadding>
-          <ListItemButton>
-            <ListItemText primary="Notes" />
-          </ListItemButton>
-        </ListItem>
-      </List>
-    </Box>
+        <li>
+          <button type="button" onClick={handleDisplay}>
+            Notes
+          </button>
+        </li>
+      </ul>
+    </div>
   );
 }
