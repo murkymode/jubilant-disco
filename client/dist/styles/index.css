@@ -26,6 +26,7 @@ a {
   /* overflow: scroll; */
 }
 
-#search-input {
-  color: white;
+.input {
+  color: black;
+  min-height: 3em;
 }

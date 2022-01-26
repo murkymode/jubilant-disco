@@ -1,14 +1,11 @@
-import * as React from 'react';
-import {
-  TextField, Box,
-} from '@mui/material';
+import React from 'react';
 
 /* components */
 
 export default function Search() {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: '#131313',
@@ -19,20 +16,15 @@ export default function Search() {
         borderRight: '1px solid grey',
       }}
     >
-      <TextField
-        id="search-input"
-        variant="filled"
-        label="Search"
-        color="success"
-        sx={{
+      <input
+        className="input"
+        placeholder="Search"
+        style={{
           width: '100%',
           margin: '.5em',
           justifyContent: 'center',
         }}
-        InputLabelProps={{
-          style: { color: 'white' },
-        }}
       />
-    </Box>
+    </div>
   );
 }

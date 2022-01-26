@@ -1,14 +1,11 @@
-import * as React from 'react';
-import {
-  Box, Typography,
-} from '@mui/material';
+import React from 'react';
 
 import HomeButton from './HomeButton';
 
 export default function TitleBar() {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         backgroundColor: '#131313',
         justifyContent: 'space-between',
@@ -17,7 +14,7 @@ export default function TitleBar() {
       }}
     >
       <HomeButton />
-      <Typography sx={{ fontWeight: 'bolder' }} variant="h2">Task Approach</Typography>
-    </Box>
+      <h2 style={{ fontWeight: 'bolder' }}>Task Approach</h2>
+    </div>
   );
 }

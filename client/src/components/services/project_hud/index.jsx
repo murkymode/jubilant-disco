@@ -1,8 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import {
-  Box, Typography,
-} from '@mui/material';
 
 /* components */
 import ActivityList from './ActivityList';
@@ -10,7 +7,7 @@ import ActionsPanel from './ActionsPanel';
 
 export default function ProjectHUD({ handleDisplay }) {
   return (
-    <Box
+    <div
       style={{
         backgroundColor: '#131313',
         flexDirection: 'column',
@@ -20,9 +17,9 @@ export default function ProjectHUD({ handleDisplay }) {
         border: '1px solid grey',
       }}
     >
-      <Typography variant="h4">Project HUD</Typography>
+      <h4>Project HUD</h4>
       <ActionsPanel />
       <ActivityList handleDisplay={handleDisplay} />
-    </Box>
+    </div>
   );
 }

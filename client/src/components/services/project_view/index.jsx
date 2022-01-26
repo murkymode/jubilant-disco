@@ -1,7 +1,4 @@
-import * as React from 'react';
-import {
-  Box, Typography,
-} from '@mui/material';
+import React from 'react';
 
 /* components */
 import Taskboard from './board_view';
@@ -12,11 +9,10 @@ import Notes from './notes_view';
 
 export default function ProjectView({ display }) {
   return (
-    <Box
+    <div
       style={{
         flexDirection: 'column',
         backgroundColor: '#131313',
-        // paddingTop: '1em',
         width: '70vw',
         height: '100%',
         borderBottom: '1px solid grey',
@@ -24,12 +20,12 @@ export default function ProjectView({ display }) {
         borderRight: '1px solid grey',
       }}
     >
-      <Typography variant="h4" style={{ margin: '.5em' }}>Project View</Typography>
+      <h4 style={{ margin: '.5em' }}>Project View</h4>
       {display === 'Calendar' ? <Calendar /> : null}
       {display === 'Taskboard' ? <Taskboard /> : null}
       {display === 'Resources' ? <Resources /> : null}
       {display === 'Whiteboard' ? <Whiteboard /> : null}
       {display === 'Notes' ? <Notes /> : null}
-    </Box>
+    </div>
   );
 }

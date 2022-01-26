@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box } from '@mui/material';
+// import { Box } from '@mui/material';
 
 export default function AddTask({ addTask }) {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         // minHeight: '60px',
         // maxHeight: '60px',
         fontSize: '4em',
@@ -17,6 +17,6 @@ export default function AddTask({ addTask }) {
       onClick={addTask}
     >
       ✚
-    </Box>
+    </div>
   );
 }

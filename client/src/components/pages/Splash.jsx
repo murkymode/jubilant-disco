@@ -3,10 +3,6 @@ import React, { useContext } from 'react';
 import PropTypes, { arrayOf } from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import {
-  Box, Paper, Stack, Button,
-} from '@mui/material';
-
 import theme from '../theme';
 import Context from '../context';
 import ManageProjects from '../services/manage_projects';
@@ -22,35 +18,28 @@ const Splash = ({ projects }) => {
   };
 
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        '& > :not(style)': {
-          backgroundColor: main,
-          p: 0.5,
-          m: 1,
-          width: '60vw',
-          height: '40vh',
-        },
       }}
     >
-      <Paper
-        elevation={4}
+      <div
         style={{
           display: 'flex',
+          flexDirection: 'column',
           justifyContent: 'center',
         }}
       >
-        <Stack
+        <div
           style={{
             margin: '1em',
           }}
         >
           {projects.map((project) => (
-            <Button
-              variant="outlined"
+            <button
+              type="button"
               onClick={setID}
               id={project._id}
               key={project._id}
@@ -59,17 +48,21 @@ const Splash = ({ projects }) => {
                 minWidth: '20em',
                 maxWidth: '40em',
                 maxHeight: '3em',
+                minHeight: '2em',
                 overflow: 'hidden',
                 cursor: 'pointer',
+                backgroundColor: main,
+                border: 'none',
+                borderRadius: '3px',
               }}
             >
               <Link to="/home">{project.title}</Link>
-            </Button>
+            </button>
           ))}
-        </Stack>
+        </div>
         <ManageProjects />
-      </Paper>
-    </Box>
+      </div>
+    </div>
   );
 };
 

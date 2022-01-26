@@ -1,9 +1,5 @@
 import React, { useState, useContext } from 'react';
 
-import {
-  Box,
-} from '@mui/material';
-
 /* components */
 import Context from '../../context';
 // import theme from '../../theme';
@@ -20,14 +16,14 @@ export default function ActionsPanel() {
   };
 
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         minWidth: '100%',
         minHeight: '20vh',
       }}
     >
       Hello from actions
       <AddTask addTask={addTask} />
-    </Box>
+    </div>
   );
 }

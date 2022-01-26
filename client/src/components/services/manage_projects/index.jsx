@@ -1,8 +1,5 @@
-import * as React from 'react';
+import React from 'react';
 import axios from 'axios';
-import {
-  Paper, TextField, Box,
-} from '@mui/material';
 
 export default function AddProject() {
   const handleSubmit = (e) => {
@@ -23,16 +20,12 @@ export default function AddProject() {
   };
 
   return (
-    <Box>
-      <Paper
-        elevation={3}
-        sx={{
+    <div>
+      <div
+        style={{
           backgroundColor: '#131313',
           display: 'flex',
           justifyContent: 'space-evenly',
-          '& > :not(style)': {
-            m: 1,
-          },
         }}
       >
         <form
@@ -42,26 +35,18 @@ export default function AddProject() {
             flexDirection: 'column',
           }}
         >
-          <TextField
+          <input
             required
-            id="search-input"
-            variant="outlined"
-            label="Project Title"
-            InputLabelProps={{
-              style: { color: 'white' },
-            }}
+            className="input"
+            placeholder="Project Title"
           />
-          <TextField
-            id="search-input"
-            variant="outlined"
-            label="Project Description"
-            InputLabelProps={{
-              style: { color: 'white' },
-            }}
+          <input
+            className="input"
+            placeholder="Project Description"
           />
           <button style={{ fontSize: '4em', padding: '0.3em' }} type="submit">+</button>
         </form>
-      </Paper>
-    </Box>
+      </div>
+    </div>
   );
 }
