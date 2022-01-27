@@ -1,11 +1,14 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext } from 'react';
-import axios from 'axios';
 import PropTypes, { arrayOf } from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
+
 import theme from '../theme';
 import Context from '../context';
+
+/* components */
 import ManageProjects from '../services/manage_projects';
 
 const { main } = theme.palette.secondary;
