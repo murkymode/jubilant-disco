@@ -43,7 +43,8 @@ router.post('/', async (req, res) => {
 router.post('/addColumn', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
-    project.columns.push(req.body);
+    const { title } = req.body;
+    project.columns.push({ title });
     const update = await project.save();
     res.json(update);
   } catch (err) {
