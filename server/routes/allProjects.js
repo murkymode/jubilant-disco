@@ -52,6 +52,27 @@ router.post('/addColumn', async (req, res) => {
   }
 });
 
+/* new Task */
+router.post('/addTask', async (req, res) => {
+  try {
+    const { id, title } = req.body;
+    const project = await Project.updateOne(
+      { _id: id },
+      {
+        $push: {
+          tasks: {
+            title,
+          },
+        },
+      },
+      { acknowledged: true },
+    );
+    res.json(project);
+  } catch (err) {
+    res.send(`Error: ${err}`);
+  }
+});
+
 /* remove project */
 router.delete('/', async (req, res) => {
   try {
