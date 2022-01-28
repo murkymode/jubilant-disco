@@ -9,7 +9,6 @@ export default function ActivityList({ handleDisplay }) {
         display: 'flex',
         backgroundColor: '#131313',
         flexDirection: 'column',
-        paddingTop: '1em',
       }}
     >
       <ul>

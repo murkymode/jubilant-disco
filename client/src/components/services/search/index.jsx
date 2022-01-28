@@ -9,7 +9,7 @@ export default function Search() {
         display: 'flex',
         justifyContent: 'center',
         backgroundColor: '#131313',
-        width: '30vw',
+        width: '100%',
         height: '9vh',
         borderLeft: '1px solid grey',
         borderTop: '1px solid grey',

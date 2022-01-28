@@ -6,7 +6,10 @@ export default function Home() {
     <button
       type="button"
       style={{
-        backgroundColor: '#131313',
+        backgroundColor: '#1c3148',
+        minWidth: '10em',
+        border: 'none',
+        borderRadius: '3%',
       }}
     >
       <Link to="/">
