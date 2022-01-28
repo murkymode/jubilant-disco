@@ -3,6 +3,8 @@ A simple assisstant for gathering materials and ideas. 🎯
 
 Create tasks for your projects and be as strict or carefree with your scheduling as you'd like.
 
+🚧 This repo in under construction 🚧 Feel free to browse though.
+
 ## Architecture
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
@@ -13,4 +15,4 @@ Create tasks for your projects and be as strict or carefree with your scheduling
 <!-- ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
 ![Testing-Library](https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&logo=testing-library&logoColor=white) -->
 
-![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white)
+<!-- ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white) -->
