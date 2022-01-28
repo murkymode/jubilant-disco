@@ -14,7 +14,7 @@ export default function TitleBar() {
       }}
     >
       <HomeButton />
-      <h2 style={{ fontWeight: 'bolder' }}>Task Approach</h2>
+      <h2 style={{ fontWeight: 'bolder' }}>Task Attack</h2>
     </div>
   );
 }
