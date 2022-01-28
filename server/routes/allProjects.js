@@ -55,7 +55,7 @@ router.post('/addColumn', async (req, res) => {
 /* new Task */
 router.post('/addTask', async (req, res) => {
   try {
-    const { id, title, columnID } = req.body;
+    const { id, columnID, title } = req.body;
     const project = await Project.updateOne(
       { _id: id, 'columns._id': columnID },
       {
