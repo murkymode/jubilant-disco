@@ -39,7 +39,7 @@ export default function Home({ projects }) {
         <div
           className="project-view"
         >
-          <ProjectView display={display} />
+          <ProjectView display={display} projects={projects} />
         </div>
       </div>
     </div>

@@ -1,9 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+
+import Context from '../../../context';
 
 import Column from './task_column';
 
-export default function Taskboard() {
-  const [columns, setColumns] = useState([]);
+export default function Taskboard({ projects }) {
+  const { projectID } = useContext(Context);
+  const [project, setProject] = useState({});
+
+  useEffect(() => {
+    projects.forEach((element) => {
+      if (element._id === projectID) {
+        setProject(element);
+      }
+    });
+  }, []);
+
+  console.log(project);
   return (
     <div
       style={{
@@ -12,7 +25,7 @@ export default function Taskboard() {
         overflow: 'auto',
       }}
     >
-      {columns.map((column) => <Column key={column.id} column={column} />)}
+      {/* {project.columns.map((column) => <Column key={column._id} column={column} />)} */}
     </div>
   );
 }
