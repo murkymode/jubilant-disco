@@ -7,9 +7,9 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
-    res.json(projects);
+    res.status(200).json(projects);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
@@ -17,9 +17,9 @@ router.get('/', async (req, res) => {
 router.get('/current', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
-    res.json(project);
+    res.status(200).json(project);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
@@ -33,9 +33,9 @@ router.post('/', async (req, res) => {
 
   try {
     const write = await project.save();
-    res.send(write);
+    res.status(200).send(write);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
@@ -46,9 +46,9 @@ router.post('/addColumn', async (req, res) => {
     const { title } = req.body;
     project.columns.push({ title });
     const update = await project.save();
-    res.json(update);
+    res.status(200).json(update);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
@@ -67,9 +67,9 @@ router.post('/addTask', async (req, res) => {
       },
       { acknowledged: true },
     );
-    res.json(project);
+    res.status(200).json(project);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
@@ -78,9 +78,9 @@ router.delete('/', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
     const removed = await project.remove();
-    res.json(removed);
+    res.status(200).json(removed);
   } catch (err) {
-    res.send(`Error: ${err}`);
+    res.status(500).send(`Error: ${err}`);
   }
 });
 
