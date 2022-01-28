@@ -5,7 +5,7 @@ export default function TaskCard({ task }) {
   return (
     <div
       style={{
-        width: '100%',
+        minWidth: '4em',
         minHeight: '6rem',
         marginBottom: '1em',
         padding: '0.5em',
