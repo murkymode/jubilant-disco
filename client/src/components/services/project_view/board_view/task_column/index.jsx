@@ -22,7 +22,7 @@ export default function TaskColumn({ column }) {
       {`Hello from ${column.title}`}
       <br />
       {'Tasks include: '}
-      {column.tasks.map((task) => <TaskCard key={task.id} task={task} />)}
+      {column.tasks.map((task) => <TaskCard key={task._id} task={task} />)}
     </div>
   );
 }
