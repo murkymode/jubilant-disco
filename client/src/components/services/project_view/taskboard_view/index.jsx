@@ -8,7 +8,7 @@ import Context from '../../../context';
 
 import Column from './task_column';
 
-export default function Taskboard({ projects }) {
+export default function Taskboard() {
   const { projectID } = useContext(Context);
   const [project, setProject] = useState({
     _id: '',
@@ -27,6 +27,7 @@ export default function Taskboard({ projects }) {
       id: projectID,
     },
   };
+
   useEffect(() => {
     axios(options)
       .then((res) => {
