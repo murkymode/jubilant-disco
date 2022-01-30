@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 /* components */
@@ -7,7 +8,7 @@ import Resources from './resource_view';
 import Whiteboard from './whiteboard_view';
 import Notes from './notes_view';
 
-export default function ProjectView({ display, projects }) {
+export default function ProjectView({ display }) {
   return (
     <div
       style={{
