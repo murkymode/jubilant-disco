@@ -26,13 +26,12 @@ router.get('/current', async (req, res) => {
 
 /* new project */
 router.post('/', async (req, res) => {
-  const { title, info } = req.body;
-  const project = new Project({
-    title,
-    info,
-  });
-
   try {
+    const { title, info } = req.body;
+    const project = new Project({
+      title,
+      info,
+    });
     const write = await project.save();
     res.status(200).send(write);
   } catch (err) {
