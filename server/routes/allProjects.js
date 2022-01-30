@@ -16,8 +16,9 @@ router.get('/', async (req, res) => {
 /* get current project */
 router.get('/current', async (req, res) => {
   try {
-    const project = await Project.findById(req.body.id);
-    res.status(200).json(project);
+    const { id } = req.query;
+    const project = await Project.findById(id);
+    res.json(project);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
   }
@@ -25,10 +26,10 @@ router.get('/current', async (req, res) => {
 
 /* new project */
 router.post('/', async (req, res) => {
-  const { body } = req;
+  const { title, info } = req.body;
   const project = new Project({
-    title: body.title,
-    info: body.info,
+    title,
+    info,
   });
 
   try {
