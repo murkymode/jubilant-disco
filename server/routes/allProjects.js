@@ -18,7 +18,7 @@ router.get('/current', async (req, res) => {
   try {
     const { id } = req.query;
     const project = await Project.findById(id);
-    res.json(project);
+    res.status(200).json(project);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
   }
@@ -42,8 +42,8 @@ router.post('/', async (req, res) => {
 /* new column */
 router.post('/addColumn', async (req, res) => {
   try {
-    const project = await Project.findById(req.body.id);
     const { title } = req.body;
+    const project = await Project.findById(req.body.id);
     project.columns.push({ title });
     const update = await project.save();
     res.status(200).json(update);
