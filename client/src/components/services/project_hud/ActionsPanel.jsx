@@ -1,20 +1,12 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 
 /* components */
-import Context from '../../context';
 // import theme from '../../theme';
-import AddTask from './AddTask';
+import NewColumn from './NewColumn';
 
 // const { main } = theme.palette.secondary;
 
 export default function ActionsPanel() {
-  const { projectID } = useContext(Context);
-  // const [tasks, setTasks] = useState([]);
-
-  const addTask = () => {
-    console.log(projectID);
-  };
-
   return (
     <div
       style={{
@@ -22,8 +14,7 @@ export default function ActionsPanel() {
         minHeight: '20vh',
       }}
     >
-      Hello from actions
-      <AddTask addTask={addTask} />
+      <NewColumn />
     </div>
   );
 }
