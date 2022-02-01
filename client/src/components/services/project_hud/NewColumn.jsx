@@ -1,22 +1,35 @@
-import React from 'react';
-// import { Box } from '@mui/material';
+import React, { useState } from 'react';
 
-export default function AddTask() {
+export default function NewColumn() {
+  const [formData, setFormData] = useState({
+    title: '',
+    info: '',
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const title = e.target[0].value;
+    const info = e.target[1].value;
+    setFormData({
+      title,
+      info,
+    });
+  };
+
   return (
     <div
       style={{
         // minHeight: '60px',
         // maxHeight: '60px',
         fontSize: '4em',
-        '&:hover': {
-          opacity: [0.9, 0.8, 0.7],
-          cursor: 'pointer',
-          color: 'green',
-        },
       }}
-      onClick={addTask}
     >
-      ✚
+      <form onSubmit={handleSubmit}>
+        <input placeholder="Column title" />
+        <br />
+        <input placeholder="Column info" />
+        <br />
+        <button type="submit">✚</button>
+      </form>
     </div>
   );
 }

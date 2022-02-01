@@ -14,7 +14,6 @@ export default function ActionsPanel() {
         minHeight: '20vh',
       }}
     >
-      Hello from actions
       <NewColumn />
     </div>
   );
