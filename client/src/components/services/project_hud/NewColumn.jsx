@@ -1,7 +1,7 @@
 import React from 'react';
 // import { Box } from '@mui/material';
 
-export default function AddTask({ addTask }) {
+export default function AddTask() {
   return (
     <div
       style={{
