@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import AddTask from '../../../project_hud/NewTask';
 
 import TaskCard from '../task_card';
 
@@ -10,6 +11,7 @@ export default function TaskColumn({ column }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
+        justifyContent: 'space-between',
         alignContent: 'center',
         minWidth: '15em',
         height: '35em',
@@ -24,6 +26,7 @@ export default function TaskColumn({ column }) {
       <br />
       {'Tasks include: '}
       {column.tasks.map((task) => <TaskCard key={task._id} task={task} />)}
+      <AddTask />
     </div>
   );
 }
