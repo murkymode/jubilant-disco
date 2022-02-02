@@ -5,7 +5,7 @@ import AddTask from '../../../project_hud/NewTask';
 
 import TaskCard from '../task_card';
 
-export default function TaskColumn({ column }) {
+export default function TaskColumn({ column, id }) {
   return (
     <div
       style={{
@@ -22,10 +22,12 @@ export default function TaskColumn({ column }) {
         overflow: 'auto',
       }}
     >
-      {`Hello from ${column.title}`}
+      {`Hello from ${id}`}
       <br />
       {'Tasks include: '}
-      {column.tasks.map((task) => <TaskCard key={task._id} task={task} />)}
+      {column.tasks.map(
+        (task) => <TaskCard key={task._id} task={task} />,
+      )}
       <AddTask />
     </div>
   );

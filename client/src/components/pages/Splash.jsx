@@ -25,6 +25,7 @@ const Splash = ({ projects }) => {
     const projectID = e.target.parentNode.id;
 
     axios.delete('/api/projects', { data: { id: projectID } });
+    window.location.reload(false);
   };
 
   return (
@@ -72,11 +73,11 @@ const Splash = ({ projects }) => {
                 }}
               >
                 <Link to="/home">{project.title}</Link>
-                <div
+                <span
                   onClick={handleDelete}
                 >
                   X
-                </div>
+                </span>
               </button>
             </div>
           ))}
