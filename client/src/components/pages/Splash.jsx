@@ -73,12 +73,11 @@ const Splash = ({ projects }) => {
                 }}
               >
                 <Link to="/home">{project.title}</Link>
-                <button
-                  type="button"
+                <span
                   onClick={handleDelete}
                 >
                   X
-                </button>
+                </span>
               </button>
             </div>
           ))}
