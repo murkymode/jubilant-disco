@@ -8,7 +8,7 @@ import Resources from './resource_view';
 import Whiteboard from './whiteboard_view';
 import Notes from './notes_view';
 
-export default function ProjectView({ display }) {
+export default function ProjectView({ display, projects }) {
   return (
     <div
       style={{
@@ -23,7 +23,7 @@ export default function ProjectView({ display }) {
     >
       <h4 style={{ margin: '.5em' }}>Project View</h4>
       {display === 'Calendar' ? <Calendar /> : null}
-      {display === 'Taskboard' ? <Taskboard /> : null}
+      {display === 'Taskboard' ? <Taskboard projects={projects} /> : null}
       {display === 'Resources' ? <Resources /> : null}
       {display === 'Whiteboard' ? <Whiteboard /> : null}
       {display === 'Notes' ? <Notes /> : null}

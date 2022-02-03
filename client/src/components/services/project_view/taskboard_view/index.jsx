@@ -1,15 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-underscore-dangle */
-import React, { useState, useContext, useEffect } from 'react';
-
-import axios from 'axios';
-
-import Context from '../../../context';
+import React, { useState, useEffect } from 'react';
 
 import Column from './task_column';
 
-export default function Taskboard() {
-  const { projectID } = useContext(Context);
+export default function Taskboard({ projects }) {
   const [project, setProject] = useState({
     _id: '',
     title: '',
@@ -20,22 +15,15 @@ export default function Taskboard() {
     notes: [],
   });
 
-  const options = {
-    method: 'get',
-    url: '/api/projects/current',
-    params: {
-      id: projectID,
-    },
-  };
-
   useEffect(() => {
-    axios(options)
-      .then((res) => {
-        setProject(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const currentID = window.sessionStorage.getItem('currentProject');
+    let currentProject = {};
+    projects.forEach((proj) => {
+      if (proj._id === currentID) {
+        currentProject = proj;
+      }
+    });
+    setProject(currentProject);
   }, []);
 
   return (
@@ -47,7 +35,7 @@ export default function Taskboard() {
       }}
     >
       {project.columns.map(
-        (column) => <Column key={column._id} column={column} />,
+        (column) => <Column key={column._id} id={column._id} column={column} />,
       )}
     </div>
   );

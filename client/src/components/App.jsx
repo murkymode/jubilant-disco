@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 /* router */
 import {
@@ -29,6 +29,7 @@ export default function Page() {
     const [projectID, setProjectID] = useState('');
 
     const handleID = (stringID) => {
+      window.sessionStorage.setItem('currentProject', stringID);
       setProjectID(stringID);
     };
 
