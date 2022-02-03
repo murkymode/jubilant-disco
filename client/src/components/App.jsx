@@ -55,7 +55,7 @@ export default function Page() {
               <Splash projects={data} />
             </Route>
             <Route path="/home">
-              <Home />
+              <Home projects={data} />
             </Route>
           </Switch>
         </Router>
