@@ -15,7 +15,7 @@ export default function TaskCard({ task }) {
     >
       {`Hello from ${task.title}`}
       <br />
-      {/* {`${task.info}`} */}
+      {`${task.info}`}
     </div>
   );
 }
