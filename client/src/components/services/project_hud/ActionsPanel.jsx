@@ -2,7 +2,7 @@ import React from 'react';
 
 /* components */
 // import theme from '../../theme';
-import NewColumn from './NewColumn';
+import AddColumn from './AddColumn';
 
 // const { main } = theme.palette.secondary;
 
@@ -14,7 +14,7 @@ export default function ActionsPanel() {
         minHeight: '20vh',
       }}
     >
-      <NewColumn />
+      <AddColumn />
     </div>
   );
 }

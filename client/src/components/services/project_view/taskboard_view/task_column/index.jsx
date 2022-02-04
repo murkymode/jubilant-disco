@@ -1,7 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import AddTask from '../../../project_hud/NewTask';
+import AddTask from '../../../project_hud/AddTask';
 
 import TaskCard from '../task_card';
 
