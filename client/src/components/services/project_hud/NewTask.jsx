@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 
-export default function NewTask() {
+import axios from 'axios';
+
+export default function NewTask({ columnID }) {
   const [expanded, setExpanded] = useState(false);
-  const [formData, setFormData] = useState({
-    title: '',
-    info: '',
-  });
 
   const expandForm = () => {
     setExpanded(true);
@@ -13,20 +11,22 @@ export default function NewTask() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const projectID = window.sessionStorage.getItem('currentProject');
     const title = e.target[0].value;
     const info = e.target[1].value;
-    setFormData({
-      title,
-      info,
-    });
+
+    axios.post('/api/projects/addTask', {
+      projectID, columnID, title, info,
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
     setExpanded(false);
+    window.location.reload(false);
   };
 
   return (
     <div
       style={{
-        // minHeight: '60px',
-        // maxHeight: '60px',
         fontSize: '4em',
       }}
     >
@@ -34,7 +34,7 @@ export default function NewTask() {
         : (
           <div>
             <form onSubmit={handleSubmit}>
-              <input placeholder="Task title" />
+              <input required placeholder="Task title" />
               <br />
               <input placeholder="Task info" />
               <br />

@@ -55,12 +55,14 @@ router.post('/addColumn', async (req, res) => {
 /* new Task */
 router.post('/addTask', async (req, res) => {
   try {
-    const { projectID, columnID, title } = req.body;
+    const {
+      projectID, columnID, title, info,
+    } = req.body;
     const project = await Project.updateOne(
       { _id: projectID, 'columns._id': columnID },
       {
         $push: {
-          'columns.$.tasks': { title },
+          'columns.$.tasks': { title, info },
         },
       },
     );

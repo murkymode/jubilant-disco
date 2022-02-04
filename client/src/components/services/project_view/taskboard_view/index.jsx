@@ -35,7 +35,7 @@ export default function Taskboard({ projects }) {
       }}
     >
       {project.columns.map(
-        (column) => <Column key={column._id} id={column._id} column={column} />,
+        (column) => <Column key={column._id} columnID={column._id} column={column} />,
       )}
     </div>
   );
