@@ -5,8 +5,8 @@ import axios from 'axios';
 export default function NewTask({ columnID }) {
   const [expanded, setExpanded] = useState(false);
 
-  const expandForm = () => {
-    setExpanded(true);
+  const handleFormVisiblity = () => {
+    setExpanded(!expanded);
   };
 
   const handleSubmit = (e) => {
@@ -20,7 +20,7 @@ export default function NewTask({ columnID }) {
     })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
-    setExpanded(false);
+    handleFormVisiblity();
     window.location.reload(false);
   };
 
@@ -30,7 +30,7 @@ export default function NewTask({ columnID }) {
         fontSize: '4em',
       }}
     >
-      {!expanded ? <button type="button" onClick={expandForm}>✚</button>
+      {!expanded ? <button type="button" onClick={handleFormVisiblity}>✚</button>
         : (
           <div>
             <form onSubmit={handleSubmit}>
@@ -40,6 +40,7 @@ export default function NewTask({ columnID }) {
               <br />
               <button type="submit">✚</button>
             </form>
+            <button type="button" onClick={handleFormVisiblity}>−</button>
           </div>
         )}
     </div>
