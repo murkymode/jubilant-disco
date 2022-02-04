@@ -6,6 +6,7 @@ const taskSchema = require('./taskSchema');
 const { Schema } = mongoose;
 const columnSchema = new Schema({
   title: String,
+  info: String,
   tasks: [taskSchema],
 });
 
