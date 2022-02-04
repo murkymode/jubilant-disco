@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export default function NewColumn() {
+export default function AddColumn() {
   const handleSubmit = (e) => {
     const currentID = window.sessionStorage.getItem('currentProject');
     const title = e.target[0].value;
