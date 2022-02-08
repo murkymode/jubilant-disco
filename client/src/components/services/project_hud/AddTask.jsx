@@ -18,7 +18,7 @@ export default function NewTask({ columnID }) {
     axios.post('/api/projects/addTask', {
       projectID, columnID, title, info,
     })
-      .then((res) => console.log(res))
+      .then((res) => res.send())
       .catch((err) => console.log(err));
     handleFormVisiblity();
     window.location.reload(false);
