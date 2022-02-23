@@ -28,6 +28,7 @@ export default function Page() {
   function App() {
     const [projectID, setProjectID] = useState('');
 
+    /* current project stored in session */
     const handleID = (stringID) => {
       window.sessionStorage.setItem('currentProject', stringID);
       setProjectID(stringID);
@@ -43,6 +44,7 @@ export default function Page() {
     if (error) return `Aww, an error: ${error.message}`;
 
     return (
+      /* look into an alternative to context */
       <Context.Provider
         value={{
           handleID,
