@@ -15,9 +15,11 @@ export default function Taskboard({ projects }) {
     notes: [],
   });
 
+  /* persists project once set in session */
   useEffect(() => {
     const currentID = window.sessionStorage.getItem('currentProject');
     let currentProject = {};
+
     projects.forEach((proj) => {
       if (proj._id === currentID) {
         currentProject = proj;
@@ -35,7 +37,13 @@ export default function Taskboard({ projects }) {
       }}
     >
       {project.columns.map(
-        (column) => <Column key={column._id} columnID={column._id} column={column} />,
+        (column) => (
+          <Column
+            key={column._id}
+            columnID={column._id}
+            column={column}
+          />
+        ),
       )}
     </div>
   );

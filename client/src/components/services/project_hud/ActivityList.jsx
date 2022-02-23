@@ -4,6 +4,7 @@ import React from 'react';
 
 export default function ActivityList({ handleDisplay }) {
   return (
+    /* refactor to a map of activities */
     <div
       style={{
         display: 'flex',

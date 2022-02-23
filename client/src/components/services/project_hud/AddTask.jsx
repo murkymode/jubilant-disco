@@ -9,6 +9,7 @@ export default function NewTask({ columnID }) {
     setExpanded(!expanded);
   };
 
+  /* new task */
   const handleSubmit = (e) => {
     e.preventDefault();
     const projectID = window.sessionStorage.getItem('currentProject');
