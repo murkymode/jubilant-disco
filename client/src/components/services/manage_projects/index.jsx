@@ -10,6 +10,7 @@ export default function AddProject() {
       info,
     };
 
+    /* new project */
     axios.post('/api/projects', request)
       .then((response) => {
         response.send();

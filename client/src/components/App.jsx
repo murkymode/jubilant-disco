@@ -20,6 +20,7 @@ import Home from './pages/Home';
 const queryClient = new QueryClient();
 
 export default function Page() {
+  /* query client handles data fetching behavior */
   return (
     <QueryClientProvider client={queryClient}>
       <App />

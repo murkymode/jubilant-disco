@@ -21,6 +21,7 @@ const Splash = ({ projects }) => {
     handleID(id);
   };
 
+  /* remove project */
   const handleDelete = (e) => {
     const projectID = e.target.parentNode.id;
 
@@ -88,6 +89,7 @@ const Splash = ({ projects }) => {
   );
 };
 
+/* prop type validation */
 Splash.propTypes = {
   projects: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
