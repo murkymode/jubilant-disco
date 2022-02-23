@@ -1,3 +1,4 @@
+/* look into breaking these routes out to smaller files */
 const express = require('express');
 const Project = require('../../database/models/project');
 
@@ -7,6 +8,7 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
+
     res.status(200).json(projects);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
@@ -18,6 +20,7 @@ router.get('/current', async (req, res) => {
   try {
     const { id } = req.query;
     const project = await Project.findById(id);
+
     res.status(200).json(project);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
@@ -28,11 +31,14 @@ router.get('/current', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const { title, info } = req.body;
+
     const project = new Project({
       title,
       info,
     });
+
     const write = await project.save();
+
     res.status(200).send(write);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
@@ -44,8 +50,10 @@ router.post('/addColumn', async (req, res) => {
   try {
     const { title } = req.body;
     const project = await Project.findById(req.body.id);
+
     project.columns.push({ title });
     const update = await project.save();
+
     res.status(200).json(update);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
@@ -58,6 +66,7 @@ router.post('/addTask', async (req, res) => {
     const {
       projectID, columnID, title, info,
     } = req.body;
+
     const project = await Project.updateOne(
       { _id: projectID, 'columns._id': columnID },
       {
@@ -66,6 +75,7 @@ router.post('/addTask', async (req, res) => {
         },
       },
     );
+
     res.status(200).json(project);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
@@ -77,6 +87,7 @@ router.delete('/', async (req, res) => {
   try {
     const project = await Project.findById(req.body.id);
     const removed = await project.remove();
+
     res.status(200).json(removed);
   } catch (err) {
     res.status(500).send(`Error: ${err}`);
