@@ -28,7 +28,12 @@ export default function TaskColumn({ column, columnID }) {
       <br />
       {'Tasks include: '}
       {column.tasks.map(
-        (task) => <TaskCard key={task._id} task={task} />,
+        (task) => (
+          <TaskCard
+            key={task._id}
+            task={task}
+          />
+        ),
       )}
       <AddTask columnID={columnID} />
     </div>

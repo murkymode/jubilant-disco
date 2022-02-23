@@ -19,6 +19,7 @@ export default function Taskboard({ projects }) {
   useEffect(() => {
     const currentID = window.sessionStorage.getItem('currentProject');
     let currentProject = {};
+
     projects.forEach((proj) => {
       if (proj._id === currentID) {
         currentProject = proj;
