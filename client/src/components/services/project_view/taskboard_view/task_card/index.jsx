@@ -3,13 +3,14 @@ import React from 'react';
 
 import axios from 'axios';
 
-export default function TaskCard({ task }) {
+export default function TaskCard({ task, columnID }) {
   const handleDeleteTask = (e) => {
+    const projectID = window.sessionStorage.getItem('currentProject');
     const taskID = e.target.parentNode.id;
-    console.log(taskID);
-    axios.delete('/api/projects', { data: { id: taskID } });
-    // window.location.reload(false);
+    axios.delete('/api/projects/removeTask', { data: { projectID, columnID, taskID } });
+    window.location.reload(false);
   };
+
   return (
     <div
       id={task._id}
