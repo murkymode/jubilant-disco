@@ -30,6 +30,7 @@ export default function TaskColumn({ column, columnID }) {
       {column.tasks.map(
         (task) => (
           <TaskCard
+            columnID={columnID}
             key={task._id}
             task={task}
           />
