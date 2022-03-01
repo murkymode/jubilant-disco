@@ -94,4 +94,28 @@ router.delete('/', async (req, res) => {
   }
 });
 
+/* remove task */
+router.delete('/removeTask', async (req, res) => {
+  try {
+    const {
+      projectID, taskID, columnID,
+    } = req.body;
+
+    const update = await Project.updateOne(
+      { _id: projectID, 'columns._id': columnID },
+      {
+        $pull: {
+          'columns.$.tasks': {
+            _id: taskID,
+          },
+        },
+      },
+    );
+
+    res.status(200).json(update);
+  } catch (err) {
+    res.status(500).send(`Error: ${err}`);
+  }
+});
+
 module.exports = router;
