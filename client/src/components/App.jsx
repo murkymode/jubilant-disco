@@ -26,6 +26,7 @@ export default function Page() {
       <App />
     </QueryClientProvider>
   );
+
   function App() {
     const [projectID, setProjectID] = useState('');
 
