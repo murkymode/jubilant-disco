@@ -9,7 +9,7 @@ export default function ProjectHUD({ handleDisplay }) {
   return (
     <div
       style={{
-        backgroundColor: '#131313',
+        backgroundColor: '#f2f2f2',
         flexDirection: 'column',
         padding: '1em',
         width: '30vw',

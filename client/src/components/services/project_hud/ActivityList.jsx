@@ -8,7 +8,7 @@ export default function ActivityList({ handleDisplay }) {
     <div
       style={{
         display: 'flex',
-        backgroundColor: '#131313',
+        backgroundColor: '#f2f2f2',
         flexDirection: 'column',
       }}
     >

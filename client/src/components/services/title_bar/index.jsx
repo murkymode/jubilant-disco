@@ -7,7 +7,7 @@ export default function TitleBar() {
     <div
       style={{
         display: 'flex',
-        backgroundColor: '#131313',
+        backgroundColor: '#f2f2f2',
         justifyContent: 'space-between',
         padding: '1em',
         margin: '0',

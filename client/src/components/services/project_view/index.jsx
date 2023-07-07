@@ -13,7 +13,7 @@ export default function ProjectView({ display, projects }) {
     <div
       style={{
         flexDirection: 'column',
-        backgroundColor: '#131313',
+        backgroundColor: '#f2f2f2',
         width: '70vw',
         height: '100%',
         borderBottom: '1px solid grey',
