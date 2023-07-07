@@ -24,7 +24,7 @@ export default function AddProject() {
     <div>
       <div
         style={{
-          backgroundColor: '#131313',
+          backgroundColor: '#f2f2f2',
           display: 'flex',
           justifyContent: 'space-evenly',
         }}

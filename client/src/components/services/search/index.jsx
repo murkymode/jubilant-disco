@@ -8,7 +8,7 @@ export default function Search() {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        backgroundColor: '#131313',
+        backgroundColor: '#f2f2f2',
         width: '100%',
         borderLeft: '1px solid grey',
         borderTop: '1px solid grey',

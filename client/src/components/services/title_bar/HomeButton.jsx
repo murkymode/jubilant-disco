@@ -6,7 +6,7 @@ export default function Home() {
     <button
       type="button"
       style={{
-        backgroundColor: '#1c3148',
+        backgroundColor: '#f2f2f2',
         minWidth: '10em',
         border: 'none',
         borderRadius: '3%',
