@@ -1,9 +1,9 @@
 # Project Planner
-A simple assisstant for gathering materials and ideas. 🎯
+A simple assistant for gathering materials and ideas. 🎯
 
 Create tasks for your projects and be as strict or carefree with your scheduling as you'd like.
 
-🚧 This repo in under construction 🚧 Feel free to browse though.
+🚧 This repo is under construction 🚧 Feel free to browse though.
 
 ## Architecture
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
