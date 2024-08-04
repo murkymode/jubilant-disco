@@ -4,7 +4,6 @@ import React from 'react';
 /* components */
 import Taskboard from './taskboard_view';
 import Calendar from './calendar_view';
-import Resources from './resource_view';
 import Whiteboard from './whiteboard_view';
 import Notes from './notes_view';
 
@@ -24,7 +23,6 @@ export default function ProjectView({ display, projects }) {
       <h4 style={{ margin: '.5em' }}>Project View</h4>
       {display === 'Calendar' ? <Calendar /> : null}
       {display === 'Taskboard' ? <Taskboard projects={projects} /> : null}
-      {display === 'Resources' ? <Resources /> : null}
       {display === 'Whiteboard' ? <Whiteboard /> : null}
       {display === 'Notes' ? <Notes /> : null}
     </div>
